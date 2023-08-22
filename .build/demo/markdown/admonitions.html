@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<!--
+Powered by EasyDocs
+https://github.com/ntillier/EasyDocs
+-->
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://cdn.jsdelivr.net/npm/mithril/mithril.min.js"></script>
+  <link href="/index.min.css" rel="stylesheet">
+  <script defer src="/index.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css" integrity="sha384-GvrOXuhMATgEsSwCs4smul74iXGOixntILdUW9XmUC6+HX0sLNAK3q71HotJqlAn" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/highlight.js@11.8.0/styles/atom-one-light.css" rel="stylesheet" crossorigin="anonymous">
+</head>
+<body>
+    <main>
+      <header>
+        <div class="menu">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" id="menu-button">
+             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12"></path>
+          </svg>
+          <img src="/icon.svg">
+          <h1>EasyDocs</h1>
+        </div>
+        <div class="links"><a href="https://github.com/ntillier/EasyDocs" target="_blank">GitHub</a>,<a href="https://github.com/ntillier/EasyDocs/issues" target="_blank">Issues</a></div>
+      </header>
+      <div class="body">
+          <nav>
+             <a href="/" >Intro to EasyDocs</a><a href="/alternatives" >Alternatives</a><a href="/guide/getting-started" >Getting started</a><a href="/guide/organization" >Project Organization</a><a href="/guide/configuration" >Configuration</a><a href="/demo/markdown/basics" >Basics</a><a href="/demo/markdown/code" >Code</a><a href="/demo/markdown/tables" >Tables</a><a href="/demo/markdown/admonitions" >Admonitions</a><a href="/demo/markdown/katex" >KaTex</a><a href="/demo/features/navigator" >Navigator</a><a href="/demo/features/table-of-content" >Table of Content</a><a href="/demo/features/front-demo" >File config</a><a href="/demo/features/folder-demo" >Introduction</a>
+          </nav>
+          <div id="content" class="content">
+             <div id="article" class="article"><h1 id="admonitions">Admonitions</h1><p>To create an admonition, simply use a special syntax that starts with <code>!!!</code> followed by the type of admonition you want, such as <code>note</code>, <code>warning</code>, <code>info</code>, etc., and the title of the admonition.</p>
+<p>For example, to create a note admonition, use <code>!!! note Your Note Title</code> and then add your note content.</p>
+<pre><code class="hljs">!!! info Admonition title
+Admonition content
+!!!</code></pre><div class="admonition admonition-info">
+    <p class="admonition-title">Admonition title</p>
+    <p>Admonition content</p>
+
+    </div><p>The different admonition types are: <code>abstract</code>, <code>attention</code>, <code>bug</code>, <code>caution</code>, <code>danger</code>, <code>error</code>, <code>example</code>, <code>failure</code>, <code>hint</code>, <code>info</code>, <code>note</code>, <code>question</code>, <code>quote</code>, <code>success</code>, <code>tip</code>, <code>warning</code>.</p>
+<h1 id="examples">Examples</h1><h2 id="grey">Grey</h2><div class="admonition admonition-note">
+    <p class="admonition-title">demo for <strong>note</strong></p>
+    <p>content for <strong>note</strong></p>
+
+    </div><div class="admonition admonition-quote">
+    <p class="admonition-title">demo for <strong>quote</strong></p>
+    <p>content for <strong>quote</strong></p>
+
+    </div><h2 id="blue">Blue</h2><div class="admonition admonition-abstract">
+    <p class="admonition-title">demo for <strong>abstract</strong></p>
+    <p>content for <strong>abstract</strong></p>
+
+    </div><div class="admonition admonition-info">
+    <p class="admonition-title">demo for <strong>info</strong></p>
+    <p>content for <strong>info</strong></p>
+
+    </div><div class="admonition admonition-question">
+    <p class="admonition-title">demo for <strong>question</strong></p>
+    <p>content for <strong>question</strong></p>
+
+    </div><h2 id="green">Green</h2><div class="admonition admonition-hint">
+    <p class="admonition-title">demo for <strong>hint</strong></p>
+    <p>content for <strong>hint</strong></p>
+
+    </div><div class="admonition admonition-success">
+    <p class="admonition-title">demo for <strong>success</strong></p>
+    <p>content for <strong>success</strong></p>
+
+    </div><div class="admonition admonition-tip">
+    <p class="admonition-title">demo for <strong>tip</strong></p>
+    <p>content for <strong>tip</strong></p>
+
+    </div><h2 id="orange">Orange</h2><div class="admonition admonition-bug">
+    <p class="admonition-title">demo for <strong>bug</strong></p>
+    <p>content for <strong>bug</strong></p>
+
+    </div><div class="admonition admonition-caution">
+    <p class="admonition-title">demo for <strong>caution</strong></p>
+    <p>content for <strong>caution</strong></p>
+
+    </div><div class="admonition admonition-warning">
+    <p class="admonition-title">demo for <strong>warning</strong></p>
+    <p>content for <strong>warning</strong></p>
+
+    </div><h2 id="red">Red</h2><div class="admonition admonition-attention">
+    <p class="admonition-title">demo for <strong>attention</strong></p>
+    <p>content for <strong>attention</strong></p>
+
+    </div><div class="admonition admonition-danger">
+    <p class="admonition-title">demo for <strong>danger</strong></p>
+    <p>content for <strong>danger</strong></p>
+
+    </div><div class="admonition admonition-error">
+    <p class="admonition-title">demo for <strong>error</strong></p>
+    <p>content for <strong>error</strong></p>
+
+    </div><div class="admonition admonition-failure">
+    <p class="admonition-title">demo for <strong>failure</strong></p>
+    <p>content for <strong>failure</strong></p>
+
+    </div><h2 id="others">Others</h2><div class="admonition admonition-example">
+    <p class="admonition-title">demo for <strong>example</strong></p>
+    <p>content for <strong>example</strong></p>
+
+    </div></div>
+          </div>
+          <aside></aside>
+       </div>
+    </main></body>
+<script>window.__CONFIG__ = {"title":"EasyDocs","favicon":"/icon.svg","header":{"title":"EasyDocs","icon":"/icon.svg","links":[{"label":"GitHub","link":"https://github.com/ntillier/EasyDocs"},{"label":"Issues","link":"https://github.com/ntillier/EasyDocs/issues"}]},"sitemap":[{"type":0,"link":"/","label":"Intro to EasyDocs","index":0},{"type":0,"link":"/alternatives","label":"Alternatives","index":"no-index"},{"type":1,"label":"Guide","link":"/guide","index":0,"children":[{"type":0,"link":"/guide/getting-started","label":"Getting started","index":"no-index"},{"type":0,"link":"/guide/organization","label":"Project Organization","index":"no-index"},{"type":0,"link":"/guide/configuration","label":"Configuration","index":"no-index"}]},{"type":1,"label":"demo","link":"/demo","index":"no-index","children":[{"type":1,"label":"Markdown","link":"/demo/markdown","index":0,"children":[{"type":0,"link":"/demo/markdown/basics","label":"Basics","index":0},{"type":0,"link":"/demo/markdown/code","label":"Code","index":1},{"type":0,"link":"/demo/markdown/tables","label":"Tables","index":2},{"type":0,"link":"/demo/markdown/admonitions","label":"Admonitions","index":3},{"type":0,"link":"/demo/markdown/katex","label":"KaTex","index":4}]},{"type":1,"label":"Features","link":"/demo/features","index":1,"children":[{"type":0,"link":"/demo/features/navigator","label":"Navigator","index":0},{"type":0,"link":"/demo/features/table-of-content","label":"Table of Content","index":1},{"type":0,"link":"/demo/features/front-demo","label":"File config","index":2},{"type":1,"label":"Folder config","link":"/demo/features/folder-demo","index":"no-index","children":[{"type":0,"link":"/demo/features/folder-demo","label":"Introduction","index":"no-index"}]}]}]}]}</script>
+</html>

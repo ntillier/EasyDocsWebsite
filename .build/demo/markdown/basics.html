@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<!--
+Powered by EasyDocs
+https://github.com/ntillier/EasyDocs
+-->
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://cdn.jsdelivr.net/npm/mithril/mithril.min.js"></script>
+  <link href="/index.min.css" rel="stylesheet">
+  <script defer src="/index.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css" integrity="sha384-GvrOXuhMATgEsSwCs4smul74iXGOixntILdUW9XmUC6+HX0sLNAK3q71HotJqlAn" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/highlight.js@11.8.0/styles/atom-one-light.css" rel="stylesheet" crossorigin="anonymous">
+</head>
+<body>
+    <main>
+      <header>
+        <div class="menu">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" id="menu-button">
+             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12"></path>
+          </svg>
+          <img src="/icon.svg">
+          <h1>EasyDocs</h1>
+        </div>
+        <div class="links"><a href="https://github.com/ntillier/EasyDocs" target="_blank">GitHub</a>,<a href="https://github.com/ntillier/EasyDocs/issues" target="_blank">Issues</a></div>
+      </header>
+      <div class="body">
+          <nav>
+             <a href="/" >Intro to EasyDocs</a><a href="/alternatives" >Alternatives</a><a href="/guide/getting-started" >Getting started</a><a href="/guide/organization" >Project Organization</a><a href="/guide/configuration" >Configuration</a><a href="/demo/markdown/basics" >Basics</a><a href="/demo/markdown/code" >Code</a><a href="/demo/markdown/tables" >Tables</a><a href="/demo/markdown/admonitions" >Admonitions</a><a href="/demo/markdown/katex" >KaTex</a><a href="/demo/features/navigator" >Navigator</a><a href="/demo/features/table-of-content" >Table of Content</a><a href="/demo/features/front-demo" >File config</a><a href="/demo/features/folder-demo" >Introduction</a>
+          </nav>
+          <div id="content" class="content">
+             <div id="article" class="article"><h1 id="markdown">Markdown</h1><p>This a test of all markdown possibilities:</p>
+<hr>
+<h2 id="headings">Headings</h2><h1 id="h1-heading-1">h1 Heading 1</h1><h2 id="h2-heading-2">h2 Heading 2</h2><h3 id="h3-heading-3">h3 Heading 3</h3><h4 id="h4-heading-4">h4 Heading 4</h4><h5 id="h5-heading-5">h5 Heading 5</h5><h6 id="h6-heading-6">h6 Heading 6</h6><hr>
+<h2 id="horizontal-rules">Horizontal Rules</h2><hr>
+<hr>
+<hr>
+<hr>
+<h2 id="emphasis">Emphasis</h2><p><strong>This is bold text</strong></p>
+<p><strong>This is bold text</strong></p>
+<p><em>This is italic text</em></p>
+<p><em>This is italic text</em></p>
+<p><del>Strikethrough</del></p>
+<hr>
+<h2 id="links">Links</h2><p><a target="_blank" href="http://dev.nodeca.com" title="null">link text</a></p>
+<p><a target="_blank" href="http://nodeca.github.io/pica/demo/" title="title text!">link with title</a></p>
+<p>This is <a target="_blank" href="http://example.com/" title="Title">an example</a> inline link.</p>
+<p><a target="_blank" href="http://example.net/" title="null">This link</a> has no title attribute.</p>
+<hr>
+<h2 id="blockquotes">Blockquotes</h2><blockquote>
+<p>Blockquotes can also be nested...</p>
+<blockquote>
+<p>...by using additional greater-than signs right next to each other...</p>
+<blockquote>
+<p>...or with spaces between arrows.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<hr>
+<h2 id="indentation">Indentation</h2><p>  indentation 1-1</p>
+<p>indentation 1-2
+    indentation 2-1</p>
+<hr>
+<h2 id="lists">Lists</h2><h3 id="unordered">Unordered</h3><ul>
+<li>Create a list by starting a line with <code>+</code>, <code>-</code>, or <code>*</code></li>
+<li>Sub-lists are made by indenting 2 spaces:<ul>
+<li>Marker character change forces new list start:<ul>
+<li>Ac tristique libero volutpat at</li>
+</ul>
+<ul>
+<li>Facilisis in pretium nisl aliquet</li>
+</ul>
+<ul>
+<li>Nulla volutpat aliquam velit</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Very easy!</li>
+</ul>
+<h3 id="ordered">Ordered</h3><h4 id="numers-in-sequence">Numers in sequence</h4><ol>
+<li>Lorem ipsum dolor sit amet</li>
+<li>Consectetur adipiscing elit</li>
+<li>Integer molestie lorem at massa</li>
+</ol>
+<h4 id="numers-not-in-sequence">Numers not in sequence</h4><ol>
+<li>You can use sequential numbers...</li>
+<li>...or keep all the numbers as <code>1.</code></li>
+</ol>
+<hr>
+<h2 id="images">Images</h2><p><img src="https://octodex.github.com/images/dinotocat.png" alt="Minion">
+<img src="https://octodex.github.com/images/saritocat.png" alt="Stormtroopocat" title="The Stormtroopocat"></p>
+<p>Like links, Images also have a footnote style syntax</p>
+<p><img src="https://octodex.github.com/images/daftpunktocat-thomas.gif" alt="Alt text" title="The Dojocat"></p>
+<p>With a reference later in the document defining the URL location:</p>
+<hr>
+<h2 id="tables">Tables</h2><table><thead><tr><th>Option</th>
+<th>Description</th>
+</tr></thead><tbody><tr><td>data</td>
+<td>path to data files to supply the data that will be passed into templates.</td>
+</tr><tr><td>engine</td>
+<td>engine to be used for processing templates. Handlebars is the default.</td>
+</tr><tr><td>ext</td>
+<td>extension to be used for dest files.</td>
+</tr></tbody></table><p>Right aligned columns</p>
+<table><thead><tr><th align=right>Option</th>
+<th align=right>Description</th>
+</tr></thead><tbody><tr><td align=right>data</td>
+<td align=right>path to data files to supply the data that will be passed into templates.</td>
+</tr><tr><td align=right>engine</td>
+<td align=right>engine to be used for processing templates. Handlebars is the default.</td>
+</tr><tr><td align=right>ext</td>
+<td align=right>extension to be used for dest files.</td>
+</tr></tbody></table><hr>
+<h2 id="code">Code</h2><p>Inline <code>code</code></p>
+<p>Indented code</p>
+<pre><code class="hljs">// Some comments
+line 1 of code
+line 2 of code
+line 3 of code</code></pre><p>Block code &quot;fences&quot;</p>
+<pre><code class="hljs">Sample text here...</code></pre><p>Syntax highlighting</p>
+<pre><code class="hljs"><span class="hljs-keyword">var</span> foo = <span class="hljs-keyword">function</span> (<span class="hljs-params">bar</span>) {
+  <span class="hljs-keyword">return</span> bar++;
+};
+
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-title function_">foo</span>(<span class="hljs-number">5</span>));</code></pre><hr>
+</div>
+          </div>
+          <aside></aside>
+       </div>
+    </main></body>
+<script>window.__CONFIG__ = {"title":"EasyDocs","favicon":"/icon.svg","header":{"title":"EasyDocs","icon":"/icon.svg","links":[{"label":"GitHub","link":"https://github.com/ntillier/EasyDocs"},{"label":"Issues","link":"https://github.com/ntillier/EasyDocs/issues"}]},"sitemap":[{"type":0,"link":"/","label":"Intro to EasyDocs","index":0},{"type":0,"link":"/alternatives","label":"Alternatives","index":"no-index"},{"type":1,"label":"Guide","link":"/guide","index":0,"children":[{"type":0,"link":"/guide/getting-started","label":"Getting started","index":"no-index"},{"type":0,"link":"/guide/organization","label":"Project Organization","index":"no-index"},{"type":0,"link":"/guide/configuration","label":"Configuration","index":"no-index"}]},{"type":1,"label":"demo","link":"/demo","index":"no-index","children":[{"type":1,"label":"Markdown","link":"/demo/markdown","index":0,"children":[{"type":0,"link":"/demo/markdown/basics","label":"Basics","index":0},{"type":0,"link":"/demo/markdown/code","label":"Code","index":1},{"type":0,"link":"/demo/markdown/tables","label":"Tables","index":2},{"type":0,"link":"/demo/markdown/admonitions","label":"Admonitions","index":3},{"type":0,"link":"/demo/markdown/katex","label":"KaTex","index":4}]},{"type":1,"label":"Features","link":"/demo/features","index":1,"children":[{"type":0,"link":"/demo/features/navigator","label":"Navigator","index":0},{"type":0,"link":"/demo/features/table-of-content","label":"Table of Content","index":1},{"type":0,"link":"/demo/features/front-demo","label":"File config","index":2},{"type":1,"label":"Folder config","link":"/demo/features/folder-demo","index":"no-index","children":[{"type":0,"link":"/demo/features/folder-demo","label":"Introduction","index":"no-index"}]}]}]}]}</script>
+</html>

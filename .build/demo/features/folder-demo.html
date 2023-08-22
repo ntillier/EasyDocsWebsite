@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--
+Powered by EasyDocs
+https://github.com/ntillier/EasyDocs
+-->
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://cdn.jsdelivr.net/npm/mithril/mithril.min.js"></script>
+  <link href="/index.min.css" rel="stylesheet">
+  <script defer src="/index.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css" integrity="sha384-GvrOXuhMATgEsSwCs4smul74iXGOixntILdUW9XmUC6+HX0sLNAK3q71HotJqlAn" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/highlight.js@11.8.0/styles/atom-one-light.css" rel="stylesheet" crossorigin="anonymous">
+</head>
+<body>
+    <main>
+      <header>
+        <div class="menu">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" id="menu-button">
+             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12"></path>
+          </svg>
+          <img src="/icon.svg">
+          <h1>EasyDocs</h1>
+        </div>
+        <div class="links"><a href="https://github.com/ntillier/EasyDocs" target="_blank">GitHub</a>,<a href="https://github.com/ntillier/EasyDocs/issues" target="_blank">Issues</a></div>
+      </header>
+      <div class="body">
+          <nav>
+             <a href="/" >Intro to EasyDocs</a><a href="/alternatives" >Alternatives</a><a href="/guide/getting-started" >Getting started</a><a href="/guide/organization" >Project Organization</a><a href="/guide/configuration" >Configuration</a><a href="/demo/markdown/basics" >Basics</a><a href="/demo/markdown/code" >Code</a><a href="/demo/markdown/tables" >Tables</a><a href="/demo/markdown/admonitions" >Admonitions</a><a href="/demo/markdown/katex" >KaTex</a><a href="/demo/features/navigator" >Navigator</a><a href="/demo/features/table-of-content" >Table of Content</a><a href="/demo/features/front-demo" >File config</a><a href="/demo/features/folder-demo" >Introduction</a>
+          </nav>
+          <div id="content" class="content">
+             <div id="article" class="article"><h1 id="folder-config">Folder config</h1><p>EasyDocs lets you easily edit your directories&#39; slug and label and order, in your files as in your directories. To edit the slug/label/order of a directory, you just need to create a JSON config file in it, like below.</p>
+<pre><code class="hljs"><span class="hljs-punctuation">{</span>
+  <span class="hljs-attr">&quot;slug&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;folder-demo&quot;</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">&quot;label&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;Folder config&quot;</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">&quot;index&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">1</span>
+<span class="hljs-punctuation">}</span></code></pre><div class="admonition admonition-info">
+    <p class="admonition-title">Info</p>
+    <p>This is the config file of the current directory!</p>
+
+    </div><p>You can edit three options:</p>
+<h2 id="slug">slug</h2><p>The slug is the URL-friendly version of the directory&#39;s label. This option allows you to edit it.</p>
+<h2 id="label">label</h2><p>By adding this option, you change the name the users will see in the navigation bar.</p>
+<h2 id="index">index</h2><p>The index let you change the order of the directory inside its parent. If the index is greater than the index of the index of the other directories, it will be placed after them in the navigation bar. On the opposite, if the index is smaller than the index of the other directories is will be placed before them.</p>
+<h1 id="index-file">Index file</h1><p>If you name a file <code>index.md</code>, the user will view it when he will navigate to the directory, instead of the list of all the directory childrens.</p>
+<div class="admonition admonition-info">
+    <p class="admonition-title">Info</p>
+    <p>And this is why you are currently viewing this file :)</p>
+
+    </div></div>
+          </div>
+          <aside></aside>
+       </div>
+    </main></body>
+<script>window.__CONFIG__ = {"title":"EasyDocs","favicon":"/icon.svg","header":{"title":"EasyDocs","icon":"/icon.svg","links":[{"label":"GitHub","link":"https://github.com/ntillier/EasyDocs"},{"label":"Issues","link":"https://github.com/ntillier/EasyDocs/issues"}]},"sitemap":[{"type":0,"link":"/","label":"Intro to EasyDocs","index":0},{"type":0,"link":"/alternatives","label":"Alternatives","index":"no-index"},{"type":1,"label":"Guide","link":"/guide","index":0,"children":[{"type":0,"link":"/guide/getting-started","label":"Getting started","index":"no-index"},{"type":0,"link":"/guide/organization","label":"Project Organization","index":"no-index"},{"type":0,"link":"/guide/configuration","label":"Configuration","index":"no-index"}]},{"type":1,"label":"demo","link":"/demo","index":"no-index","children":[{"type":1,"label":"Markdown","link":"/demo/markdown","index":0,"children":[{"type":0,"link":"/demo/markdown/basics","label":"Basics","index":0},{"type":0,"link":"/demo/markdown/code","label":"Code","index":1},{"type":0,"link":"/demo/markdown/tables","label":"Tables","index":2},{"type":0,"link":"/demo/markdown/admonitions","label":"Admonitions","index":3},{"type":0,"link":"/demo/markdown/katex","label":"KaTex","index":4}]},{"type":1,"label":"Features","link":"/demo/features","index":1,"children":[{"type":0,"link":"/demo/features/navigator","label":"Navigator","index":0},{"type":0,"link":"/demo/features/table-of-content","label":"Table of Content","index":1},{"type":0,"link":"/demo/features/front-demo","label":"File config","index":2},{"type":1,"label":"Folder config","link":"/demo/features/folder-demo","index":"no-index","children":[{"type":0,"link":"/demo/features/folder-demo","label":"Introduction","index":"no-index"}]}]}]}]}</script>
+</html>

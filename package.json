@@ -1,0 +1,25 @@
+{
+  "private": true,
+  "name": "easydocs",
+  "version": "1.0.0",
+  "description": "Create your own documentation website",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "build": "easydocs build",
+    "dev": "easydocs dev",
+    "serve": "easydocs serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ntillier/Docs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ntillier/Docs/issues"
+  },
+  "homepage": "https://github.com/ntillier/Docs#readme"
+}

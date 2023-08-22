@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!--
+Powered by EasyDocs
+https://github.com/ntillier/EasyDocs
+-->
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://cdn.jsdelivr.net/npm/mithril/mithril.min.js"></script>
+  <link href="/index.min.css" rel="stylesheet">
+  <script defer src="/index.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css" integrity="sha384-GvrOXuhMATgEsSwCs4smul74iXGOixntILdUW9XmUC6+HX0sLNAK3q71HotJqlAn" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/highlight.js@11.8.0/styles/atom-one-light.css" rel="stylesheet" crossorigin="anonymous">
+</head>
+<body>
+    <main>
+      <header>
+        <div class="menu">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" id="menu-button">
+             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12"></path>
+          </svg>
+          <img src="/icon.svg">
+          <h1>EasyDocs</h1>
+        </div>
+        <div class="links"><a href="https://github.com/ntillier/EasyDocs" target="_blank">GitHub</a>,<a href="https://github.com/ntillier/EasyDocs/issues" target="_blank">Issues</a></div>
+      </header>
+      <div class="body">
+          <nav>
+             <a href="/" >Intro to EasyDocs</a><a href="/alternatives" >Alternatives</a><a href="/guide/getting-started" >Getting started</a><a href="/guide/organization" >Project Organization</a><a href="/guide/configuration" >Configuration</a><a href="/demo/markdown/basics" >Basics</a><a href="/demo/markdown/code" >Code</a><a href="/demo/markdown/tables" >Tables</a><a href="/demo/markdown/admonitions" >Admonitions</a><a href="/demo/markdown/katex" >KaTex</a><a href="/demo/features/navigator" >Navigator</a><a href="/demo/features/table-of-content" >Table of Content</a><a href="/demo/features/front-demo" >File config</a><a href="/demo/features/folder-demo" >Introduction</a>
+          </nav>
+          <div id="content" class="content">
+             <div id="article" class="article"><h1 id="organizing-your-project">Organizing your project</h1><p>EasyDocs leverages markdown files within the <code>/docs</code> directory to generate your website. This guide offers a comprehensive overview of how you can efficiently structure your documentation.</p>
+<h1 id="documentation-structure">Documentation Structure</h1><p>The directory layout of EasyDocs has been meticulously crafted to ensure your content remains orderly and easily manageable. Here&#39;s a breakdown:</p>
+<pre><code class="hljs">EasyDocs/
+|<span class="hljs-comment">-- docs/</span>
+|   |<span class="hljs-comment">-- index.md</span>
+|   |<span class="hljs-comment">-- about.md</span>
+|   |<span class="hljs-comment">-- guide/</span>
+|       |<span class="hljs-comment">-- guide-first-part.md</span>
+|       |<span class="hljs-comment">-- guide-second-part.md</span>
+|<span class="hljs-comment">-- public/</span>
+|   |<span class="hljs-comment">-- logo.png</span>
+|   |<span class="hljs-comment">-- background.jpg</span>
+|<span class="hljs-comment">-- .static/</span>
+|   |<span class="hljs-comment">-- tree.json</span>
+|<span class="hljs-comment">-- .build/</span>
+|   |<span class="hljs-comment">-- index.html</span>
+|   |<span class="hljs-comment">-- index.min.js</span>
+|<span class="hljs-comment">-- docs.config.json</span></code></pre><h2 id="code-docs-code-directory"><code>/docs</code> Directory</h2><p>The <code>/docs</code> directory serves as the repository for your markdown document files. Each markdown file signifies a distinct webpage. For instance:</p>
+<ul>
+<li><code>/index.md</code>: Your main landing page.</li>
+<li><code>/about.md</code>: The About Us page.</li>
+<li><code>/guide</code>: A subdirectory housing individual markdown files for a guide.</li>
+</ul>
+<div class="admonition admonition-info">
+    <p class="admonition-title">File Extensions</p>
+    <p>EasyDocs will exclusively process files in <code>/docs</code> ending with <code>.md</code>. Other files will be omitted, with exceptions for special files.</p>
+
+    </div><h2 id="code-public-code-directory"><code>/public</code> Directory</h2><p>The <code>/public</code> directory is designed for storing images and other files utilized in your website. By separating images from content, you maintain an organized structure.</p>
+<h2 id="configuration">Configuration</h2><p>The docs.config.json file contains crucial configuration settings for your website. We&#39;ll delve into this in later sections.</p>
+<h1 id="advanced-usage">Advanced Usage</h1><p>EasyDocs introduces advanced functionalities for customizing your documentation.</p>
+<h2 id="front-matter">Front Matter</h2><p>You can incorporate front matter at the outset of a file. This entails data stored in YAML format, encapsulated by <code>---</code> at the file&#39;s commencement.</p>
+<p>Three options are available:</p>
+<ul>
+<li><code>label</code>: Document name.</li>
+<li><code>slug</code>: URL-friendly version of directory label.</li>
+<li><code>index</code>: File&#39;s position within its directory.</li>
+</ul>
+<div class="admonition admonition-info">
+    <p class="admonition-title">Index Handling</p>
+    <p>The index grants you control over directory order within its parent. A higher index places the directory after others in the navigation bar, while a lower index precedes them.</p>
+
+    </div><h2 id="configuration-files">Configuration Files</h2><p>EasyDocs simplifies slug, label, and order customization for directories, both in files and within directories. To modify a directory&#39;s slug, label, or index, create a JSON config file named config.json within the directory, as demonstrated below:</p>
+<pre><code class="hljs"><span class="hljs-punctuation">{</span>
+  <span class="hljs-attr">&quot;slug&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;folder-demo&quot;</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">&quot;label&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;Folder Configuration&quot;</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">&quot;index&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">1</span>
+<span class="hljs-punctuation">}</span></code></pre><div class="admonition admonition-hint">
+    <p class="admonition-title">Efficient Editing</p>
+    <p>These three options parallel the functions of the <a target="_blank" href="#front-matter" title="null">front matter</a> attributes.</p>
+
+    </div></div>
+          </div>
+          <aside></aside>
+       </div>
+    </main></body>
+<script>window.__CONFIG__ = {"title":"EasyDocs","favicon":"/icon.svg","header":{"title":"EasyDocs","icon":"/icon.svg","links":[{"label":"GitHub","link":"https://github.com/ntillier/EasyDocs"},{"label":"Issues","link":"https://github.com/ntillier/EasyDocs/issues"}]},"sitemap":[{"type":0,"link":"/","label":"Intro to EasyDocs","index":0},{"type":0,"link":"/alternatives","label":"Alternatives","index":"no-index"},{"type":1,"label":"Guide","link":"/guide","index":0,"children":[{"type":0,"link":"/guide/getting-started","label":"Getting started","index":"no-index"},{"type":0,"link":"/guide/organization","label":"Project Organization","index":"no-index"},{"type":0,"link":"/guide/configuration","label":"Configuration","index":"no-index"}]},{"type":1,"label":"demo","link":"/demo","index":"no-index","children":[{"type":1,"label":"Markdown","link":"/demo/markdown","index":0,"children":[{"type":0,"link":"/demo/markdown/basics","label":"Basics","index":0},{"type":0,"link":"/demo/markdown/code","label":"Code","index":1},{"type":0,"link":"/demo/markdown/tables","label":"Tables","index":2},{"type":0,"link":"/demo/markdown/admonitions","label":"Admonitions","index":3},{"type":0,"link":"/demo/markdown/katex","label":"KaTex","index":4}]},{"type":1,"label":"Features","link":"/demo/features","index":1,"children":[{"type":0,"link":"/demo/features/navigator","label":"Navigator","index":0},{"type":0,"link":"/demo/features/table-of-content","label":"Table of Content","index":1},{"type":0,"link":"/demo/features/front-demo","label":"File config","index":2},{"type":1,"label":"Folder config","link":"/demo/features/folder-demo","index":"no-index","children":[{"type":0,"link":"/demo/features/folder-demo","label":"Introduction","index":"no-index"}]}]}]}]}</script>
+</html>
