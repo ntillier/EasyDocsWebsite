@@ -1,4 +1,5 @@
 {
+  "hostname": "https://easydocs.onrender.com",
   "title": "EasyDocs",
   "favicon": "/icon.svg",
   "header": {
@@ -14,5 +15,8 @@
         "link": "https://github.com/ntillier/EasyDocs/issues"
       }
     ]
-  }
+  },
+  "meta": [
+
+  ]
 }
